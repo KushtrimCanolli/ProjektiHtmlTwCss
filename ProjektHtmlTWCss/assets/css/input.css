@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: Circular;
+    src: url('../fonts/circular-std-medium-500.ttf');
+}
+
+@layer  components{
+    p{
+        @apply font-circular text-text-color
+    }
+    .brand-link{
+        @apply  font-medium text-sm text-text-color;
+
+        &:hover{
+            @apply text-red-500
+        }
+    }
+    .btn{
+        @apply inline-block font-medium border border-blue-900 bg-blue-950 text-white px-3 py-1 rounded-full transition-all ease-in-out duration-300;
+        &:hover{
+            @apply text-blue-700 bg-slate-50 border-slate-50
+        }
+    }
+    
+    .hgroup{
+        h1{
+            @apply text-4xl text-btn-color mt-3;
+        }
+        h4{
+            @apply text-xl text-text-color font-medium
+        }
+    }
+    .modul{ 
+            @apply flex flex-col mt-2 justify-center items-center text-xl text-black
+    }
+    .lable {
+        @apply bg-slate-50 text-text-color py-0.5 px-4 rounded-md;
+    }
+}
